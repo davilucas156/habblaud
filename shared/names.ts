@@ -7,23 +7,24 @@ export interface PersonName {
 
 // Nomes brasileiros para os personagens. Sem duplicatas e sem variações quase iguais
 // (ex.: Thiago/Tiago), para que cada personagem seja inconfundível no escritório.
+
 const F = [
-  'Ana', 'Beatriz', 'Camila', 'Daniela', 'Eduarda', 'Fernanda', 'Gabriela', 'Helena', 'Isabela', 'Júlia',
-  'Larissa', 'Mariana', 'Natália', 'Olívia', 'Paula', 'Rebeca', 'Sofia', 'Tatiana', 'Valentina', 'Yasmin',
-  'Alice', 'Bianca', 'Cecília', 'Débora', 'Elisa', 'Flávia', 'Giovana', 'Heloísa', 'Iara', 'Jéssica',
-  'Lívia', 'Manuela', 'Melissa', 'Nina', 'Priscila', 'Rafaela', 'Sabrina', 'Teresa', 'Vitória', 'Zoe',
-  'Aline', 'Bruna', 'Clara', 'Estela', 'Fabiana', 'Glória', 'Ingrid', 'Joana', 'Kátia', 'Lara',
-  'Maitê', 'Mirela', 'Noemi', 'Pietra', 'Renata', 'Simone', 'Sara', 'Vanessa', 'Luana', 'Marina',
-];
-const M = [
-  'Arthur', 'Bruno', 'Caio', 'Diego', 'Enzo', 'Felipe', 'Gustavo', 'Henrique', 'Igor', 'João',
-  'Kauã', 'Lucas', 'Mateus', 'Nicolas', 'Otávio', 'Pedro', 'Rafael', 'Samuel', 'Thiago', 'Vinícius',
-  'Bernardo', 'Danilo', 'Davi', 'Emanuel', 'Fábio', 'Gael', 'Heitor', 'Hugo', 'Joaquim', 'Jorge',
-  'Leonardo', 'Lorenzo', 'Luan', 'Marcelo', 'Murilo', 'Noah', 'Otto', 'Raul', 'Renato', 'Ricardo',
-  'Rodrigo', 'Sérgio', 'Theo', 'Tomás', 'Ulisses', 'Vicente', 'Wagner', 'Yuri', 'Augusto', 'Benício',
-  'César', 'Douglas', 'Elias', 'Francisco', 'Guilherme', 'Ícaro', 'Jonas', 'Leandro', 'Miguel', 'Paulo',
+  'Sakura', 'Hinata', 'Bulma', 'Misty', 'Zelda', 'Leia', 'Hermione', 'Katniss', 'Eleven', 'Mikasa',
+  'Nami', 'Robin', 'Tsunade', 'Videl', 'Android18', 'Serena', 'Chichi', 'Jessie', 'Lara', 'Jill',
+  'Claire', 'Ada', 'Tifa', 'ChunLi', 'Yennefer', 'Ciri', 'Daenerys', 'Arya', 'Sansa', 'Wanda',
+  'Natasha', 'Gamora', 'Nebula', 'Ahsoka', 'Padmé', 'Rey', 'Moana', 'Elsa', 'Mulan', 'Coraline',
+  'Violet', 'Wednesday', 'Morticia', 'Velma', 'Daphne', 'Barbie', 'Raven', 'Starfire', 'Fiona', 'Marge',
+  'Lisa', 'Barbie', 'Peach', 'Daisy', 'Rosalina', 'Eevee', 'Jigglypuff', 'Ellie', 'Jinx', 'Vi',
 ];
 
+const M = [
+  'Naruto', 'Minato', 'Goku', 'Ash', 'Vegeta', 'Sasuke', 'Itachi', 'Kakashi', 'Luffy', 'Zoro',
+  'Sanji', 'Gohan', 'Piccolo', 'Trunks', 'Ichigo', 'Eren', 'Levi', 'Tanjiro', 'Gojo', 'Saitama',
+  'Genos', 'Madara', 'Obito', 'Light', 'Jiraiya', 'Gaara', 'Inuyasha', 'Freeza', 'Yusuke', 'Hiei',
+  'Kurama', 'Gon', 'Killua', 'Hisoka', 'Deku', 'Bakugo', 'Todoroki', 'Pikachu', 'Charizard', 'Mewtwo',
+  'Lucario', 'Gengar', 'Squirtle', 'Bulbasaur', 'Charmander', 'Snorlax', 'Brock', 'James', 'Alucard', 'Kaneki',
+  'Yugi', 'Kaiba', 'Seiya', 'Link', 'Mario', 'Luigi', 'Sonic', 'Kratos', 'Geralt', 'Anakin',
+];
 export const NAME_POOL: readonly PersonName[] = Object.freeze(
   // Intercala para que nomes vizinhos no pool alternem a dica visual.
   F.flatMap((f, i) => [{ name: f, look: 'f' as const }, ...(M[i] ? [{ name: M[i], look: 'm' as const }] : [])]),
